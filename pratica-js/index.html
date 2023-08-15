@@ -40,6 +40,14 @@
             text-align: center;
             margin: auto;
         }
+
+        input#ipaís {
+            width: 200px;
+        }
+
+        div#txtpaís {
+            margin-top: 30px;
+        }
    </style>
 </head>
 <body>
@@ -69,6 +77,15 @@
         Interaja...
     </div>
 
+    <h1>Estruturas Condicionais</h1>
+    <h3>If, Else</h3>
+    <p id="askcountry">Informe o seu País de origem</p>
+    País de origem: <input type="text" name="país" id="ipaís" placeholder="Seu país">
+    <input type="button" value="Verificar" onclick="verifycountry()">
+    <div id="txtpaís">
+
+    </div>
+
     <script>   
         function antsuc() {
             var num = window.document.getElementById('principal')
@@ -91,6 +108,8 @@
         var textsoma = window.document.getElementById('psoma') // Fazendo a ligação da var textsoma, com o paragráfo de id 'psoma' que irá exibir o texto personalizado ao user.
 
         textsoma.innerText = `Olá, ${nome} digite dois números para efetuarmos uma Soma!` //Texto que será enviado ao paragráfo de id 'psoma'.
+
+
 
         //Função que irá efetuar a Soma
                                                          //Os dados que vem das caixas de texto sempre vem em formato de string então 
@@ -144,6 +163,18 @@
         function sair2() {
             a2.innerText = 'Saiu!'
             a2.style.background = 'gray'
+        }
+
+        function verifycountry() {
+            var vpaís = window.document.getElementById('ipaís')
+            resp = window.document.querySelector('div#txtpaís')
+            var vnome = nome
+
+            if (vpaís.value == 'Brasil') {
+                resp.innerHTML = `Olá <strong>${nome}</strong> seu país de origem é <strong>${vpaís.value}</strong> portanto você é <strong>Brasileiro.</strong>`
+            } else {
+                resp.innerHTML = `Olá <strong>${nome}</strong> seu país de origem é <strong>${vpaís.value}</strong> portanto você é <strong>Estrangeiro.</strong>`
+           }
         }
     </script>
 </body>
