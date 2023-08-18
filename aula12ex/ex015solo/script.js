@@ -2,7 +2,7 @@
 var agora = new Date()
 var anoatual = agora.getFullYear()
 
-//Pegando a Idade e o Sexo do Usuário
+//Pegando a Idade do Usuário
 var txtano = window.document.getElementById('iano')
 
 //Objetos que terão que ficar ocultos ou ser exibidos pela função.
