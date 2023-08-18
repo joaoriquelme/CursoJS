@@ -17,8 +17,8 @@ divoculta.style.display = 'none'
 imagensjs = window.document.getElementById('imagem')  //Ligando a var com a tag <img> para exibir as imagens de forma nativa.
 
 function verificador() {
-    var anonasc = Number(txtano.value)
-    var idade = anoatual - anonasc
+    var anonasc = Number(txtano.value)    //Transformando a string com Ano em Number
+    var idade = anoatual - anonasc       //Efetuando o cálculo da idade
     poculto.style.display = 'none'      //Ocultando Parágrafo após a função ser acionada
     divoculta.style.display = 'block'  //Exibindo a div com imagem após a função ser acionada
 
