@@ -1,0 +1,45 @@
+ligações dos paragráfos p/ maior escopo [X]
+
+declaração do Array de armazenamento p/ maior escopo [X]
+
+function add() {
+   validação -> Checar se o valor transformado em number está entre 1 e 100. else prompt -> Valor inválido ou já      encontrado na lista. E impedir de ser adicionado ao array e select. [X]
+	
+   validação -> Caso acione sem informar valor add prompt -> Valor inválido ou já encontrado na lista. [X]
+
+   validação -> Caso tente adicionar um valor que já foi adicionado deve exibir o prompt -> Valor inválido ou já    encontrado na lista. E impedir de ser adicionado no Array e Select. [FAZER DEPOIS DO ARRAY] [X]
+
+   Reset Visual -> Quando acionado com sucesso atribuir display none em todos <p> [X]
+
+   var item = document.createElement('option') // Criar os options ao chamar a função [X]
+   item.text = `Valor ${num} adicionado.` // Adicionando o número dentro do option que foi criado. [X]
+   select.appendChild(item) [X]
+
+  Armazenando -> Os números que forem adicionados no select devem ser adicionados também a um array para efetuarmos os cálculos na função de baixo. [X]
+
+}
+
+function calc() {
+   validação -> Caso acione finalizar sem informar valor add prompt -> Adicione valores antes de finalizar! [X]
+
+   Puxando o Array -> Devemos pegar os dados do Array de escopo global que foi criado e realizar os cálculos abaixo e armazená-los em vars:
+     Quantidade total de números cadastrados 
+     Cálculo maior valor entre os números cadastrados
+     Cálculo menor valor entre os números cadastrados
+     Soma de todos os valores cadastrados.
+     Média de todos os valores cadastrados.
+  Exibindo o Resultado -> Os 5 paragráfos devem ganhar display block e receber os valores acima de acordo com o resultado
+}
+
+
+ORDEM DOS PARAGRÁFOS:
+
+Ao todo, temos num números cadastrados. [FUNCIONANDO CORRETAMENTE[
+
+O maior valor informado foi 9. [FUNCIONANDO COM COMANDO DA NET]
+
+O menor valor informado foi 1. [FUNCIONANDO COM COMANDO DA NET]
+
+Somando todos os valores, temos 25. [FUNCIONANDO CORRETAMENTE APÓS ADD UM RESET SOMA = 0 NO FINAL]
+
+A média dos valores digitados é 5. [FUNCIONANDO CORRETAMENTE]

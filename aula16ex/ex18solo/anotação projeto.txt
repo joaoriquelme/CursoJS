@@ -1,0 +1,31 @@
+Pontos Importantes sobre o exercícios
+
+//VALIDAÇÕES
+
+Caso acione o botão Adicionar sem informar nenhum valor, exibir o prompt -> Valor inválido ou já encontrado na lista. [X]
+
+Caso acione o botão Finalizar sem informar nenhum valor, exibir o prompt -> Adicione valores antes de finalizar! [X]
+
+Só aceitará um número que esteja entre 1 e 100 - caso contrário deve exibir o 
+prompt -> Valor inválido ou já encontrado na lista. 
+E impedir o número de ser adicionado no array e no select.
+[X]
+
+Caso tente adicionar um valor que já foi adicionado deve exibir o 
+prompt -> Valor inválido ou já encontrado na lista.
+E impedir o número de ser adicionado no array e no select.
+[X]
+
+Caso o botão Finalizar tenha sido acionado (exibindo os cálculos) e o usuário tente adicionar mais um número, todos os paragráfos de exibição devem sumir. (Pode fazer isso adicionando um comando no começo da Function add() para resetar os paragráfos ou dar display none, toda vez que um número novo for inserido.
+[X]
+
+
+//ARMAZENAMENTO
+
+Os números que forem adicionados ao select, também devem ser jogados dentro de um array para efetuarmos as comparações.
+[X]
+
+//ACIONANDO CALC
+
+Ao acionar a função calc os 5 paragráfos devem ganhar display block e receber os valores de acordo com suas funções
+[X]

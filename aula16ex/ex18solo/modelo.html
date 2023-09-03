@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Modelo de Exercício</title>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <section>
+        <div>
+            <p style="margin-top: 0px;">
+                Número (entre 1 e 100):
+                <input type="number" name="num" id="inum">
+                <input type="button" value="Adicionar" onclick="add(); cleaninput();">
+            </p>
+        </div>
+
+        <div style="margin-top: 1px;">
+            <select name="analisador" id="iselect" size="6">
+                
+            </select>
+
+            <p style="margin-top: 0px; margin-bottom: 0px;">
+                <input type="button" value="Finalizar" onclick="calc()">
+            </p>
+
+            <p id="p1" style="margin-top: 38px;"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <p id="p5"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© CursoemVídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
