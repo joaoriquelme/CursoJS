@@ -3,52 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        body {
-            font: normal 18pt Arial;
-            text-align: center;
-        }
-
-        input {
-            font: normal 18pt Arial;
-            width: 100px;
-        }
-        
-        div#res {
-            margin-top: 20px;
-        }
-
-         div#area {
-            font: normal 20pt Arial;
-            background-color: orange;
-            color: white;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
-            margin: auto;
-        }
-
-        div#area2 {
-            font: normal 20pt Arial;
-            background-color: deeppink;
-            color: white;
-            width: 200px;
-            height: 200px;
-            line-height: 200px;
-            text-align: center;
-            margin: auto;
-        }
-
-        input#ipaís {
-            width: 200px;
-        }
-
-        div#txtpaís {
-            margin-top: 30px;
-        }
-   </style>
 </head>
 <body>
     <h1>Somando Números Utilizando Seletores DOM</h1>
@@ -86,96 +42,39 @@
 
     </div>
 
-    <script>   
-        function antsuc() {
-            var num = window.document.getElementById('principal')
-            var ante = Number(num.value)  //Transformando o valor de string em number
-            var suc = Number(num.value)  //Transformando o valor de string em number
-            var ante = --ante   //Utilizando o Operador de Pré-Incremento para chegar ao antecessor
-            var suc = ++suc    //Utilizando o Operador de Pré-Incremento para chegar ao sucessor
-            var textant = window.document.getElementById('antsuc')     // var textant recebe a ligação por id com paragráfo antsuc
-            textant.innerText = `Antecessor: ${ante} Sucessor ${suc}` // var textant recebe o resultado de antecessor e sucessor de num
-        }
-    
-        //Código para pegar o nome do usuário e enviar mensagens personalizadas
+    <h1>Validações em JavaScript</h1>
+                <fieldset>
+                    <legend>
+                        Dados Pessoais
+                    </legend>
+                    <p>
+                        <label for="iname" class="labelsform">Nome:</label>
+                        <input type="text" name="nomev" id="iname" class="inputsflex" placeholder="maior que 3 caracteres" minlength="3" required>
+                    </p>
+                    <p>
+                        <label for="iage" class="labelsform">Idade:</label>
+                        <input type="number" name="" id="iage" class="inputsflex" placeholder="entre 0 e 120" min="0" max="120" required>
+                    </p>
+                    <p>
+                        <label for="isal" class="labelsform">Salário:</label>
+                        <input type="number" name="" id="isal" class="inputsflex" placeholder="Valor deve ser maior que zero" min="1" required>
+                    </p>
+                    <p>
+                        <label for="igen" class="labelsform">Sexo:</label>
+                        <input type="text" name="sexo" id="igen" class="inputsflex" placeholder="Feminino ou Masculino" required>
+                    </p>
+                    <p>
+                        <label for="icivil" class="labelsform">Estado Civil:</label>
+                        <input type="text" name="civil" id="icivil" class="inputsflex" placeholder="Solteiro(a) - Casado(a) - Viúvo(a) - Divorciado(a)" required>
+                    </p>
+                    <p>
+                        <input type="submit" value="Enviar Dados" id="buttonform" onclick="checkdata()">
+                    </p>
+                </fieldset>
+    <p id="pformresp">
 
-        var nome = window.prompt('Qual é o seu nome?')    //Solicitando um nome ao user, e armazenando ele dentro da var -> nome
+    </p>
 
-        var texto = window.document.getElementById('p1') //Fazendo a ligação da var texto (q irá armazenar o texto) com o paragráfo de id 'p1' que irá exibir o texto no HTML
-
-        texto.innerText = `Olá, ${nome} coloque o cursor dentro da div, clique e depois coloque fora.` //Texto que será enviado direto do JS pro paragráfo em HTML
-
-        var textsoma = window.document.getElementById('psoma') // Fazendo a ligação da var textsoma, com o paragráfo de id 'psoma' que irá exibir o texto personalizado ao user.
-
-        textsoma.innerText = `Olá, ${nome} digite dois números para efetuarmos uma Soma!` //Texto que será enviado ao paragráfo de id 'psoma'.
-
-
-
-        //Função que irá efetuar a Soma
-                                                         //Os dados que vem das caixas de texto sempre vem em formato de string então 
-        function somar () {                             //precisaremos transformar em number.
-                                                       //COMO LER AS LINHAS
-            var tn1 = window.document.getElementById('txtn1')       //var tn1 recebe a ligação com o elemento selecionado pelo id "txtn1" (input 1)
-            var tn2 = window.document.querySelector('input#txtn2') //var tn2 recebe a ligação com o elemento selecionado pelo Seletor CSS de ID "#txtn2" (input 2)
-            var res = window.document.getElementById('res')      //var res recebe a ligação com o elemento selecionado pelo id "res" (div que exibirá o resultado)
-            var n1 = Number(tn1.value)   //Var n1 recebe o valor da var tn1 convertido em Number.
-            var n2 = Number(tn2.value)  //Var n2 recebe o valor da var tn2 convertido em Number.
-            var s = n1 + n2            //Var s recebe o valor da SOMA entre n1 e n2.
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}` //Var s recebe o seguinte texto concatenado e com a formatação HTML > A soma entre n1 e n2 é igual a resultado
-        }
-
-        //Declaração de Eventos feita pelo método Listener
-
-        var a = window.document.getElementById('area')  //Colocar a var fora das functions resulta num escopo maior que permite utilizar a mesma VAR dentro de várias functions.
-        a.addEventListener('click', clicar)
-        a.addEventListener('mouseenter', entrar)
-        a.addEventListener('mouseout', sair)
-
-        function clicar() {
-            a.innerText = 'Clicou!'
-            a.style.background = 'red'
-        }
-
-        function entrar() {
-            a.innerText = 'Entrou!'
-            a.style.background = 'blue'
-        }
-
-        function sair() {
-            a.innerText = 'Saiu!'
-            a.style.background = 'green'
-        }
-
-        //Declaração de Eventos feita pelo método HTML
-
-        var a2 = window.document.getElementById('area2')  //Um escopo maior que permite utilizar a mesma VAR dentro de várias functions
-
-        function clicar2() {
-            a2.innerText = 'Clicou!'
-            a2.style.background = 'deepskyblue'
-        }
-
-        function entrar2() {
-            a2.innerText = 'Entrou!'
-            a2.style.background = 'black'
-        }
-
-        function sair2() {
-            a2.innerText = 'Saiu!'
-            a2.style.background = 'gray'
-        }
-
-        function verifycountry() {
-            var vpaís = window.document.getElementById('ipaís')
-            resp = window.document.querySelector('div#txtpaís')
-            var vnome = nome
-
-            if (vpaís.value == 'Brasil') {
-                resp.innerHTML = `Olá <strong>${nome}</strong> seu país de origem é <strong>${vpaís.value}</strong> portanto você é <strong>Brasileiro.</strong>`
-            } else {
-                resp.innerHTML = `Olá <strong>${nome}</strong> seu país de origem é <strong>${vpaís.value}</strong> portanto você é <strong>Estrangeiro.</strong>`
-           }
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
